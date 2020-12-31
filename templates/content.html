@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+
+
+{% block title %}news{% endblock %}
+  
+
+{% block style %}
+
+      /* main div*/
+      body {
+        margin: 0;
+        padding: 0;        
+        justify-content: center;
+        min-height: 100vh;
+        background: #060c21;
+        font-family: 'Poppins', sans-serif, Arial, Helvetica;        
+      }
+     
+      @import url('https://fonts.googleapis.com/css?family=poppins:100,200,300,400,500,600,700,800,900');
+      .containere {
+        position: relative;
+        padding-top: 20px;
+        display: flex;
+        width: 90%;
+        display: grid;
+        align-items: center;
+
+        grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+        grid-template-rows: auto;
+        grid-gap: 0 40px;
+      }
+      .containere .box {
+        position: relative;
+        height: 400px;
+        background: #060c21;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000;
+      }
+      .containere .box:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        transform: skew(2deg,2deg);
+        z-index: -1
+      }
+      .containere .box:nth-child(1):before {
+        background: linear-gradient(315deg,#ff0057,#e64a19);
+
+      }
+      .containere .box:nth-child(2):before {
+        background: linear-gradient(315deg,#ff0057,#e64a19);
+        
+
+      }
+      .containere .box:nth-child(3):before {
+        background: linear-gradient(315deg,#e91e63,#5d02ff);
+
+      }
+      .containere .box:nth-child(4):before {
+        background: linear-gradient(315deg,#ff0000,#ffc107);
+
+      }
+      .content {
+        position: relative;
+        padding: 20px;
+        transform: translateY(40px);
+
+      }
+      .box .content h2 {
+        position: absolute;
+        top: -60px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        font-size: 10em;
+        color: rgba(225, 225,225,.05);
+        transition: 0.5s;
+      }
+      .box:hover .content h2 {
+        top: -140px;
+
+      }
+      .box .content h3 {
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+      }
+      .box .content p {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 16px;
+      }
+      .box .content a {
+        position: relative;
+        margin: 0;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: 1px solid #fff;
+        display: inline-block;
+        color: #fff;
+        transition: 0.5s;
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+      }
+      .box:hover .content a {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+      }
+      .box .content a:hover {
+        color: #000;
+        background: #fff;
+
+      }
+
+
+
+
+
+
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+
+
+  }
+  ul li {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    opacity: .8;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+        
+    }
+    ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+    ul li a:hover {
+        background-color: green;
+
+    }
+    ul li ul li {
+        display: none;
+    }
+    ul li:hover ul li {
+        display: block;
+    }
+    #image_owner {
+        text-align: right;
+    }
+    .home_class {
+
+
+    }
+    .links {
+        background-position: fixed;
+
+{% endblock %}
+{% block body %} 
+    <div>
+      <div id="links">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="#">hello</a></li>
+          <li><a href="#">mathew</a></li> 
+          <li><a href="mathew.html">mathew</a></li>  
+                   
+        </ul><br>
+      </div>
+    </div> 
+    <div class="containere">
+
+      <div class="box">
+        <div class="content">
+          <h2>01</h2>
+          <h3>service One</h3>
+          <p>
+
+            happy new year to you<br>
+            all filled with joy<br>
+            hhhhhhhhhhhhhhhbbb<br>
+            mgkhgjhmjkjnnklmhl
+          </p>
+          <a href="#">Read More</a>
+            
+        </div>      
+      </div>
+      <div class="box">
+        <div class="content">
+          <h2>02</h2>
+          <h3>service two</h3>
+          <p>hhdsjfdkfhfklgjfkgjkljkkljkgkjghlnjh,
+            bvmb,vmb lvblvkblgklbkglbglbg,lnln,hl;n,h;n,.h
+            ,.g,b.g,n;.n,.;hnh;nh;nh.,nh;,n;h;hn;
+            ,mgkhgjhmjkjnhkmnklmhlb,.;b/vljf
+          </p>
+          <a href="#">Read More</a>
+            
+        </div>      
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>03</h2>
+            <h3>service three</h3>
+            <p>hhdsjfdkfhfklgjfkgjkljkkljkgkjghlnjh,
+              bvmb,vmb lvblvkblgklbkglbglbg,lnln,hl;n,h;n,.h
+              ,.g,b.g,n;.n,.;hnh;nh;nh.,nh;,n;h;hn;
+              ,mgkhgjhmjkjnhkmnklmhlb,.;b/vljf
+            </p>
+
+            <a href="#">Read More</a>
+            
+          </div>      
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>04</h2>
+            <h3>service four</h3>
+            <p>hhdsjfdkfhfklgjfkgjkljkkljkgkjghlnjh,
+              bvmb,vmb lvblvkblgklbkglbglbg,lnln,hl;n,h;n,.h
+              ,.g,b.g,n;.n,.;hnh;nh;nh.,nh;,n;h;hn;
+              ,mgkhgjhmjkjnhkmnklmhlb,.;b/vljf
+            </p>
+
+            <a href="#">Read More</a>
+            
+          </div>      
+        </div>
+      </div>    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock %}
